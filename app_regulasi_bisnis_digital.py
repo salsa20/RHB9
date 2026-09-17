@@ -68,7 +68,7 @@ nav_options = [
     "📰 Kasus & Contoh",
     "🧠 Cara Analisis Kasus",
     "📝 Latihan Studi Kasus",
-    "🎯 Kuis 10 Soal",
+    "🎯 Kuis ",
     "📚 Referensi",
 ]
 
@@ -79,8 +79,7 @@ menu = st.sidebar.radio("Pilih bagian", nav_options, key="nav")
 
 st.sidebar.divider()
 st.sidebar.info(
-    "Materi disusun dengan bahasa sederhana untuk pembelajaran mahasiswa. "
-    "Aplikasi ini bukan nasihat hukum untuk kasus tertentu."
+        "Aplikasi ini bukan nasihat hukum untuk kasus tertentu."
 )
 
 if menu == "🏠 Beranda":
@@ -137,13 +136,7 @@ if menu == "🏠 Beranda":
         "tetapi tidak menghapus hak, kewajiban, dan tanggung jawab."
     )
 
-    st.divider()
-    st.markdown("## 🎯 Kuis Interaktif")
-    st.write("Setelah mempelajari materi, kerjakan **10 soal** dengan skor dan pembahasan otomatis.")
-    if st.button("Mulai Kuis 10 Soal", type="primary", use_container_width=True):
-        st.session_state.nav = "🎯 Kuis 10 Soal"
-        st.rerun()
-
+    
 elif menu == "🌐 Dasar Regulasi Digital":
     section_title("1. Apa itu regulasi bisnis digital?")
     st.write(
@@ -548,7 +541,7 @@ elif menu == "📝 Latihan Studi Kasus":
                 """
             )
 
-elif menu == "🎯 Kuis 10 Soal":
+elif menu == "🎯 Kuis ":
     section_title("Kuis Interaktif — 10 Soal")
     st.caption("Pilih satu jawaban paling tepat. Nilai dan pembahasan muncul setelah tombol Kirim ditekan.")
 
